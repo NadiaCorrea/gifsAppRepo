@@ -1,8 +1,22 @@
 <!-- Búsqueda -->
 <h5>Buscar:</h5>
-<input
+<!-- <input (keyup.enter)="search($event)"
     type="text"
     class="form-control"
     placeholder="Buscar gifs..."
+> -->
+<!-- Hay varias formas de hacerlo -->
+
+<form (ngSubmit)="search()">
+    
+    <input 
+    name="query"
+    type="text"
+    class="form-control"
+    placeholder="Buscar gifs..."
+    [(ngModel)]="query" 
 >
+<!-- El ngModel necesita que la propiedad esté declarada con el nombre de name -->
+</form>
+
 <!-- End Búsqueda -->
